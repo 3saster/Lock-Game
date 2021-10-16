@@ -22,8 +22,17 @@ function Randomizer(d1,d2,d3,seed) {
     presses = makeArray(d1,d2,d3);
     for (var i=0; i<d1; i++) {
         for (var j=0; j<d2; j++) {
+            var count = 0;
             for (var k=0; k<d3; k++) {
                 presses[i][j][k] = random() < 0.6 ? 1 : 0;
+                if(presses[i][j][k] == 1) {
+                    count++;
+                }
+            }
+            // No more than 7 to a click
+            if(count > 7) {
+                presses[i][j][0] = 0;
+                presses[i][j][2] = 0;
             }
         }
     }

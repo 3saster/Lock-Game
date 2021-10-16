@@ -104,25 +104,30 @@ function toggleSolutions()
 
 function randomizePresses(s = -1)
 {
-    seed = s;
-    if(s<1) {
-        do {
-            seed = Math.floor(Math.random() * (4294967296 + 1));
-            randomSeed(seed);
-            presses = Randomizer(codeLength,size,size, seed );
-        } while(solve().length != 1)
-    }
-    else
-    {
-        randomSeed(seed);
-        presses = Randomizer(codeLength,size,size, seed );
-    }
-    document.getElementById("Seed").innerText = "Seed = " + (seed).toString();
-    if(document.getElementById("Solutions").innerText != "") {
-        document.getElementById("Solutions").innerText = ""
-    }
     reset(true);
     resetButtons();
+    document.getElementById("Solutions").innerText = ""
+    document.getElementById("Seed").innerText = "Loading...";
+
+    setTimeout(function(){
+        seed = s;
+        if(s<1) {
+            do {
+                seed = Math.floor(Math.random() * (4294967296 + 1));
+                randomSeed(seed);
+                presses = Randomizer(codeLength,size,size, seed );
+            } while(solve().length != 1)
+        }
+        else
+        {
+            randomSeed(seed);
+            presses = Randomizer(codeLength,size,size, seed );
+        }
+        document.getElementById("Seed").innerText = "Seed = " + (seed).toString();
+        if(document.getElementById("Solutions").innerText != "") {
+            document.getElementById("Solutions").innerText = ""
+        }
+    }, 0);
 }
 
 function customSeed()
