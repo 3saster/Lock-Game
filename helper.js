@@ -30,9 +30,13 @@ function Randomizer(d1,d2,d3,seed) {
                 }
             }
             // No more than 7 to a click
-            if(count > 7) {
-                presses[i][j][0] = 0;
-                presses[i][j][2] = 0;
+            while(count > 7)
+            {
+                var r=Math.floor(random()*size);
+                if(presses[i][j][r] == 1) {
+                    presses[i][j][r] = 0;
+                    count--;
+                }
             }
         }
     }
