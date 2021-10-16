@@ -4,12 +4,6 @@ function addvector(a,b){
 function clampvector(a,min,max){
     return a.map((e,i) => Math.min(Math.max(e,min),max));
 }
-  
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(random() * (max - min + 1)) + min;
-}
 
 function makeArray(d1, d2, d3) {
     var arr = [];
@@ -29,7 +23,7 @@ function Randomizer(d1,d2,d3,seed) {
     for (var i=0; i<d1; i++) {
         for (var j=0; j<d2; j++) {
             for (var k=0; k<d3; k++) {
-                presses[i][j][k] = getRandomInt(0,1);
+                presses[i][j][k] = random() < 0.5 ? 1 : 0;
             }
         }
     }
