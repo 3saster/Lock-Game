@@ -93,8 +93,11 @@ function toggleSolutions()
 {
     if(document.getElementById("Solutions").innerText == "") {
         sol = solve();
+		if(sol.length == 0) {
+			document.getElementById("Solutions").innerText = "No Solutions!\r\n";
+		}
         for (var i=0; i<sol.length; i++) {
-            document.getElementById("Solutions").innerText += sol.length>0 ? sol[i] + "\r\n" : "No Solutions!\r\n";
+            document.getElementById("Solutions").innerText += sol[i] + "\r\n";
         }
     }
     else {
