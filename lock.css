@@ -8,3 +8,14 @@
   font-weight: bold;
   text-align: center;
 }
+
+.minicell {
+  width:20px;    
+  height:20px;
+  border: 0px solid #000000;
+  background: #FFFFFF;
+  font-size: 36pt;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+}

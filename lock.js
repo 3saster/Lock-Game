@@ -12,10 +12,10 @@ randomizePresses();
 
 function clickCell(n, doc = false) {
     if(inputLength < codeLength) {
-        grid = clampvector(addvector(grid,presses[inputLength][n]),0,1);
+        grid = clampvector(addvector(grid,presses[inputLength][n]),0,3);
         for (var i=0; i<size; i++) {
             if( doc && presses[inputLength][n][i] == 1 ) {
-                document.getElementById("cell_"+i).style.color = "#00FFE7";
+                document.getElementById("cell_"+i).style.color = "#00FFFF";
             }
             else {
                 document.getElementById("cell_"+i).style.color = "#000000";
@@ -23,32 +23,21 @@ function clickCell(n, doc = false) {
         }
         inputLength++;
     }
-    if(inputLength >= codeLength) {
+    if(inputLength >= codeLength && doc) {
         // Success
-        if(Math.min(...grid) >= 1) {
+        if(Math.min(...grid) == 3) {
+            document.getElementById("Title").innerText = "Access Granted";
             for (var i=0; i<size; i++) {
-                grid[i] = 3;
-            }
-            if(doc) {
-                document.getElementById("Title").innerText = "Access Granted";
-                for (var i=0; i<size; i++) {
-                    document.getElementById("cell_"+i).style.color = "#000000";
-                }
+                document.getElementById("cell_"+i).style.color = "#000000";
             }
         }
         // Failure
         else {
-            for (var i=0; i<size; i++) {
-                if(grid[i] == 1)
-                grid[i] = 2;
-            }
-            if(doc) {
-                document.getElementById("Title").innerText = "Wrong passcode, try again";
-                setTimeout(function(){
-                    document.getElementById("Title").innerText = "";
-                    reset(true);
-                }, 2000); 
-            }
+            document.getElementById("Title").innerText = "Wrong passcode, try again";
+            setTimeout(function(){
+                document.getElementById("Title").innerText = "";
+                reset(true);
+            }, 2000); 
         }
     }
     if(doc) {
@@ -62,10 +51,10 @@ function updateCells() {
         case 0: // White
             document.getElementById("cell_"+i).style.background = "#FFFFFF"; break;
         case 1: // Yellow
-            document.getElementById("cell_"+i).style.background = "#FFFF00"; break;
-        case 2: // Red (Failure)
             document.getElementById("cell_"+i).style.background = "#FF0000"; break;
-        case 3: // Green (Success)
+        case 2: // Orange
+            document.getElementById("cell_"+i).style.background = "#FFB100"; break;
+        case 3: // Green
             document.getElementById("cell_"+i).style.background = "#00FF00"; break;
         }
     }
@@ -105,7 +94,7 @@ function toggleSolutions()
     if(document.getElementById("Solutions").innerText == "") {
         sol = solve();
         for (var i=0; i<sol.length; i++) {
-            document.getElementById("Solutions").innerText += sol[i] + "\r\n";
+            document.getElementById("Solutions").innerText += sol.length>0 ? sol[i] + "\r\n" : "No Solutions!\r\n";
         }
     }
     else {
@@ -115,20 +104,25 @@ function toggleSolutions()
 
 function randomizePresses(s = -1)
 {
-    do {
-        if(s == -1) {
+    seed = s;
+    if(s<1) {
+        do {
             seed = Math.floor(Math.random() * (4294967296 + 1));
-        }
-        else {
-            seed = s;
-        }
+            randomSeed(seed);
+            presses = Randomizer(codeLength,size,size, seed );
+        } while(solve().length != 1)
+    }
+    else
+    {
+        randomSeed(seed);
         presses = Randomizer(codeLength,size,size, seed );
-    } while(solve().length == 0)
+    }
     document.getElementById("Seed").innerText = "Seed = " + (seed).toString();
     if(document.getElementById("Solutions").innerText != "") {
         document.getElementById("Solutions").innerText = ""
     }
     reset(true);
+    resetButtons();
 }
 
 function customSeed()
@@ -137,5 +131,33 @@ function customSeed()
     seed = Number(seed);
     if(seed > 0) {
         randomizePresses(seed);
+    }
+}
+
+function fillButtons()
+{
+    for (var turn=0; turn<codeLength; turn++) {
+        for (var pos=0; pos<size; pos++) {
+            for (var num=0; num<size; num++) {
+                var box = document.getElementById("turn"+turn+"_"+pos+"_"+num);
+                box.style.border = "1px solid #000000";
+                if( presses[turn][num][pos] == 1) {
+                    box.style.background = "#FF0000";
+                }
+            }
+        }
+    }
+}
+
+function resetButtons()
+{
+    for (var turn=0; turn<codeLength; turn++) {
+        for (var pos=0; pos<size; pos++) {
+            for (var num=0; num<size; num++) {
+                var box = document.getElementById("turn"+turn+"_"+pos+"_"+num);
+                box.style.border = "0px solid #000000";
+                box.style.background = "#FFFFFF";
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 function addvector(a,b){
-    return a.map((e,i) => (e + b[i])%2);
+    return a.map((e,i) => (e + b[i]));
 }
 function clampvector(a,min,max){
     return a.map((e,i) => Math.min(Math.max(e,min),max));
@@ -23,7 +23,7 @@ function Randomizer(d1,d2,d3,seed) {
     for (var i=0; i<d1; i++) {
         for (var j=0; j<d2; j++) {
             for (var k=0; k<d3; k++) {
-                presses[i][j][k] = random() < 0.5 ? 1 : 0;
+                presses[i][j][k] = random() < 0.6 ? 1 : 0;
             }
         }
     }

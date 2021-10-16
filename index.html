@@ -18,12 +18,404 @@
       </tr>
       </table>
       <input type=button onClick="Javascript: randomizePresses();" value="Randomize">
-      <input type=button onClick="Javascript: customSeed();" value="Custom Seed">
-      <input type=button onClick="Javascript: toggleSolutions();" value="Solutions">
+      <input type=button onClick="Javascript: customSeed();" value="Custom Seed"><br/>
+      <input type=button onClick="Javascript: fillButtons();" value="Check Buttons">
+      <input type=button onClick="Javascript: toggleSolutions();" value="Solution(s)">
     <br/>
     <B id="Seed"></B><br/><br/>
     <B id="Solutions"></B>
       </center>
+
+      <Table>
+        <tr>
+          <td id="turn0_0_0" class="minicell"></td>
+          <td id="turn0_1_0" class="minicell"></td>
+          <td id="turn0_2_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_0" class="minicell"></td>
+          <td id="turn1_1_0" class="minicell"></td>
+          <td id="turn1_2_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_0" class="minicell"></td>
+          <td id="turn2_1_0" class="minicell"></td>
+          <td id="turn2_2_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_0" class="minicell"></td>
+          <td id="turn3_1_0" class="minicell"></td>
+          <td id="turn3_2_0" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_0" class="minicell"></td>
+          <td id="turn0_4_0" class="minicell"></td>
+          <td id="turn0_5_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_0" class="minicell"></td>
+          <td id="turn1_4_0" class="minicell"></td>
+          <td id="turn1_5_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_0" class="minicell"></td>
+          <td id="turn2_4_0" class="minicell"></td>
+          <td id="turn2_5_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_0" class="minicell"></td>
+          <td id="turn3_4_0" class="minicell"></td>
+          <td id="turn3_5_0" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_0" class="minicell"></td>
+          <td id="turn0_7_0" class="minicell"></td>
+          <td id="turn0_8_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_0" class="minicell"></td>
+          <td id="turn1_7_0" class="minicell"></td>
+          <td id="turn1_8_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_0" class="minicell"></td>
+          <td id="turn2_7_0" class="minicell"></td>
+          <td id="turn2_8_0" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_0" class="minicell"></td>
+          <td id="turn3_7_0" class="minicell"></td>
+          <td id="turn3_8_0" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_1" class="minicell"></td>
+          <td id="turn0_1_1" class="minicell"></td>
+          <td id="turn0_2_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_1" class="minicell"></td>
+          <td id="turn1_1_1" class="minicell"></td>
+          <td id="turn1_2_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_1" class="minicell"></td>
+          <td id="turn2_1_1" class="minicell"></td>
+          <td id="turn2_2_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_1" class="minicell"></td>
+          <td id="turn3_1_1" class="minicell"></td>
+          <td id="turn3_2_1" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_1" class="minicell"></td>
+          <td id="turn0_4_1" class="minicell"></td>
+          <td id="turn0_5_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_1" class="minicell"></td>
+          <td id="turn1_4_1" class="minicell"></td>
+          <td id="turn1_5_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_1" class="minicell"></td>
+          <td id="turn2_4_1" class="minicell"></td>
+          <td id="turn2_5_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_1" class="minicell"></td>
+          <td id="turn3_4_1" class="minicell"></td>
+          <td id="turn3_5_1" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_1" class="minicell"></td>
+          <td id="turn0_7_1" class="minicell"></td>
+          <td id="turn0_8_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_1" class="minicell"></td>
+          <td id="turn1_7_1" class="minicell"></td>
+          <td id="turn1_8_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_1" class="minicell"></td>
+          <td id="turn2_7_1" class="minicell"></td>
+          <td id="turn2_8_1" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_1" class="minicell"></td>
+          <td id="turn3_7_1" class="minicell"></td>
+          <td id="turn3_8_1" class="minicell"></td>
+        </tr><td class="minicell"></td>
+        
+        <tr>
+          <td id="turn0_0_2" class="minicell"></td>
+          <td id="turn0_1_2" class="minicell"></td>
+          <td id="turn0_2_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_2" class="minicell"></td>
+          <td id="turn1_1_2" class="minicell"></td>
+          <td id="turn1_2_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_2" class="minicell"></td>
+          <td id="turn2_1_2" class="minicell"></td>
+          <td id="turn2_2_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_2" class="minicell"></td>
+          <td id="turn3_1_2" class="minicell"></td>
+          <td id="turn3_2_2" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_2" class="minicell"></td>
+          <td id="turn0_4_2" class="minicell"></td>
+          <td id="turn0_5_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_2" class="minicell"></td>
+          <td id="turn1_4_2" class="minicell"></td>
+          <td id="turn1_5_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_2" class="minicell"></td>
+          <td id="turn2_4_2" class="minicell"></td>
+          <td id="turn2_5_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_2" class="minicell"></td>
+          <td id="turn3_4_2" class="minicell"></td>
+          <td id="turn3_5_2" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_2" class="minicell"></td>
+          <td id="turn0_7_2" class="minicell"></td>
+          <td id="turn0_8_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_2" class="minicell"></td>
+          <td id="turn1_7_2" class="minicell"></td>
+          <td id="turn1_8_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_2" class="minicell"></td>
+          <td id="turn2_7_2" class="minicell"></td>
+          <td id="turn2_8_2" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_2" class="minicell"></td>
+          <td id="turn3_7_2" class="minicell"></td>
+          <td id="turn3_8_2" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_3" class="minicell"></td>
+          <td id="turn0_1_3" class="minicell"></td>
+          <td id="turn0_2_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_3" class="minicell"></td>
+          <td id="turn1_1_3" class="minicell"></td>
+          <td id="turn1_2_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_3" class="minicell"></td>
+          <td id="turn2_1_3" class="minicell"></td>
+          <td id="turn2_2_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_3" class="minicell"></td>
+          <td id="turn3_1_3" class="minicell"></td>
+          <td id="turn3_2_3" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_3" class="minicell"></td>
+          <td id="turn0_4_3" class="minicell"></td>
+          <td id="turn0_5_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_3" class="minicell"></td>
+          <td id="turn1_4_3" class="minicell"></td>
+          <td id="turn1_5_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_3" class="minicell"></td>
+          <td id="turn2_4_3" class="minicell"></td>
+          <td id="turn2_5_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_3" class="minicell"></td>
+          <td id="turn3_4_3" class="minicell"></td>
+          <td id="turn3_5_3" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_3" class="minicell"></td>
+          <td id="turn0_7_3" class="minicell"></td>
+          <td id="turn0_8_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_3" class="minicell"></td>
+          <td id="turn1_7_3" class="minicell"></td>
+          <td id="turn1_8_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_3" class="minicell"></td>
+          <td id="turn2_7_3" class="minicell"></td>
+          <td id="turn2_8_3" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_3" class="minicell"></td>
+          <td id="turn3_7_3" class="minicell"></td>
+          <td id="turn3_8_3" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_4" class="minicell"></td>
+          <td id="turn0_1_4" class="minicell"></td>
+          <td id="turn0_2_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_4" class="minicell"></td>
+          <td id="turn1_1_4" class="minicell"></td>
+          <td id="turn1_2_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_4" class="minicell"></td>
+          <td id="turn2_1_4" class="minicell"></td>
+          <td id="turn2_2_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_4" class="minicell"></td>
+          <td id="turn3_1_4" class="minicell"></td>
+          <td id="turn3_2_4" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_4" class="minicell"></td>
+          <td id="turn0_4_4" class="minicell"></td>
+          <td id="turn0_5_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_4" class="minicell"></td>
+          <td id="turn1_4_4" class="minicell"></td>
+          <td id="turn1_5_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_4" class="minicell"></td>
+          <td id="turn2_4_4" class="minicell"></td>
+          <td id="turn2_5_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_4" class="minicell"></td>
+          <td id="turn3_4_4" class="minicell"></td>
+          <td id="turn3_5_4" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_4" class="minicell"></td>
+          <td id="turn0_7_4" class="minicell"></td>
+          <td id="turn0_8_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_4" class="minicell"></td>
+          <td id="turn1_7_4" class="minicell"></td>
+          <td id="turn1_8_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_4" class="minicell"></td>
+          <td id="turn2_7_4" class="minicell"></td>
+          <td id="turn2_8_4" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_4" class="minicell"></td>
+          <td id="turn3_7_4" class="minicell"></td>
+          <td id="turn3_8_4" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_5" class="minicell"></td>
+          <td id="turn0_1_5" class="minicell"></td>
+          <td id="turn0_2_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_5" class="minicell"></td>
+          <td id="turn1_1_5" class="minicell"></td>
+          <td id="turn1_2_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_5" class="minicell"></td>
+          <td id="turn2_1_5" class="minicell"></td>
+          <td id="turn2_2_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_5" class="minicell"></td>
+          <td id="turn3_1_5" class="minicell"></td>
+          <td id="turn3_2_5" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_5" class="minicell"></td>
+          <td id="turn0_4_5" class="minicell"></td>
+          <td id="turn0_5_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_5" class="minicell"></td>
+          <td id="turn1_4_5" class="minicell"></td>
+          <td id="turn1_5_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_5" class="minicell"></td>
+          <td id="turn2_4_5" class="minicell"></td>
+          <td id="turn2_5_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_5" class="minicell"></td>
+          <td id="turn3_4_5" class="minicell"></td>
+          <td id="turn3_5_5" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_5" class="minicell"></td>
+          <td id="turn0_7_5" class="minicell"></td>
+          <td id="turn0_8_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_5" class="minicell"></td>
+          <td id="turn1_7_5" class="minicell"></td>
+          <td id="turn1_8_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_5" class="minicell"></td>
+          <td id="turn2_7_5" class="minicell"></td>
+          <td id="turn2_8_5" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_5" class="minicell"></td>
+          <td id="turn3_7_5" class="minicell"></td>
+          <td id="turn3_8_5" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_6" class="minicell"></td>
+          <td id="turn0_1_6" class="minicell"></td>
+          <td id="turn0_2_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_6" class="minicell"></td>
+          <td id="turn1_1_6" class="minicell"></td>
+          <td id="turn1_2_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_6" class="minicell"></td>
+          <td id="turn2_1_6" class="minicell"></td>
+          <td id="turn2_2_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_6" class="minicell"></td>
+          <td id="turn3_1_6" class="minicell"></td>
+          <td id="turn3_2_6" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_6" class="minicell"></td>
+          <td id="turn0_4_6" class="minicell"></td>
+          <td id="turn0_5_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_6" class="minicell"></td>
+          <td id="turn1_4_6" class="minicell"></td>
+          <td id="turn1_5_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_6" class="minicell"></td>
+          <td id="turn2_4_6" class="minicell"></td>
+          <td id="turn2_5_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_6" class="minicell"></td>
+          <td id="turn3_4_6" class="minicell"></td>
+          <td id="turn3_5_6" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_6" class="minicell"></td>
+          <td id="turn0_7_6" class="minicell"></td>
+          <td id="turn0_8_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_6" class="minicell"></td>
+          <td id="turn1_7_6" class="minicell"></td>
+          <td id="turn1_8_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_6" class="minicell"></td>
+          <td id="turn2_7_6" class="minicell"></td>
+          <td id="turn2_8_6" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_6" class="minicell"></td>
+          <td id="turn3_7_6" class="minicell"></td>
+          <td id="turn3_8_6" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_7" class="minicell"></td>
+          <td id="turn0_1_7" class="minicell"></td>
+          <td id="turn0_2_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_7" class="minicell"></td>
+          <td id="turn1_1_7" class="minicell"></td>
+          <td id="turn1_2_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_7" class="minicell"></td>
+          <td id="turn2_1_7" class="minicell"></td>
+          <td id="turn2_2_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_7" class="minicell"></td>
+          <td id="turn3_1_7" class="minicell"></td>
+          <td id="turn3_2_7" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_7" class="minicell"></td>
+          <td id="turn0_4_7" class="minicell"></td>
+          <td id="turn0_5_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_7" class="minicell"></td>
+          <td id="turn1_4_7" class="minicell"></td>
+          <td id="turn1_5_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_7" class="minicell"></td>
+          <td id="turn2_4_7" class="minicell"></td>
+          <td id="turn2_5_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_7" class="minicell"></td>
+          <td id="turn3_4_7" class="minicell"></td>
+          <td id="turn3_5_7" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_7" class="minicell"></td>
+          <td id="turn0_7_7" class="minicell"></td>
+          <td id="turn0_8_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_7" class="minicell"></td>
+          <td id="turn1_7_7" class="minicell"></td>
+          <td id="turn1_8_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_7" class="minicell"></td>
+          <td id="turn2_7_7" class="minicell"></td>
+          <td id="turn2_8_7" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_7" class="minicell"></td>
+          <td id="turn3_7_7" class="minicell"></td>
+          <td id="turn3_8_7" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        <tr>
+          <td id="turn0_0_8" class="minicell"></td>
+          <td id="turn0_1_8" class="minicell"></td>
+          <td id="turn0_2_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_0_8" class="minicell"></td>
+          <td id="turn1_1_8" class="minicell"></td>
+          <td id="turn1_2_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_0_8" class="minicell"></td>
+          <td id="turn2_1_8" class="minicell"></td>
+          <td id="turn2_2_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_0_8" class="minicell"></td>
+          <td id="turn3_1_8" class="minicell"></td>
+          <td id="turn3_2_8" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_3_8" class="minicell"></td>
+          <td id="turn0_4_8" class="minicell"></td>
+          <td id="turn0_5_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_3_8" class="minicell"></td>
+          <td id="turn1_4_8" class="minicell"></td>
+          <td id="turn1_5_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_3_8" class="minicell"></td>
+          <td id="turn2_4_8" class="minicell"></td>
+          <td id="turn2_5_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_3_8" class="minicell"></td>
+          <td id="turn3_4_8" class="minicell"></td>
+          <td id="turn3_5_8" class="minicell"></td>
+        </tr>
+        <tr>
+          <td id="turn0_6_8" class="minicell"></td>
+          <td id="turn0_7_8" class="minicell"></td>
+          <td id="turn0_8_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn1_6_8" class="minicell"></td>
+          <td id="turn1_7_8" class="minicell"></td>
+          <td id="turn1_8_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn2_6_8" class="minicell"></td>
+          <td id="turn2_7_8" class="minicell"></td>
+          <td id="turn2_8_8" class="minicell"></td><td class="minicell"></td>
+          <td id="turn3_6_8" class="minicell"></td>
+          <td id="turn3_7_8" class="minicell"></td>
+          <td id="turn3_8_8" class="minicell"></td>
+        </tr><td class="minicell"></td>
+
+        
+          </table>
 
 <script src="helper.js"></script>
 <script src="lock.js"></script>
