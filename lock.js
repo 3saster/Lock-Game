@@ -88,16 +88,12 @@ function solve()
 {
     var sol = [];
     reset();
-    for (var i=0; i<=8888; i++) {
-        var dig = [Math.floor(i/1000)%10, Math.floor(i/100)%10, Math.floor(i/10)%10, Math.floor(i/1)%10];
-        if(dig.includes(size)) {
-            continue;
-        }
-        for (var a=0; a<=codeLength; a++) {
-            clickCell(dig[a]);
+    for (var i=0; i<=Math.pow(size,codeLength)-1; i++) {
+        for (var a=codeLength-1; a>=0; a--) {
+            clickCell(Math.floor(i/Math.pow(size,a))%size);
         }
         if(Math.min(...grid) == 3) {
-            sol.push(i+1111);
+            sol.push( Number(i.toString(size)) + (Math.pow(10,codeLength)-1)/9 );
         }
         reset();
     }
