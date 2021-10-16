@@ -10,9 +10,17 @@ var grid = new Array(size);
 var presses;
 randomizePresses();
 
-function clickCell(i, doc = false) {
+function clickCell(n, doc = false) {
     if(inputLength < codeLength) {
-        grid = clampvector(addvector(grid,presses[inputLength][i]),0,1);
+        grid = clampvector(addvector(grid,presses[inputLength][n]),0,1);
+        for (var i=0; i<size; i++) {
+            if( doc && presses[inputLength][n][i] == 1 ) {
+                document.getElementById("cell_"+i).style.color = "#00FFE7";
+            }
+            else {
+                document.getElementById("cell_"+i).style.color = "#000000";
+            }
+        }
         inputLength++;
     }
     if(inputLength >= codeLength) {
@@ -23,6 +31,9 @@ function clickCell(i, doc = false) {
             }
             if(doc) {
                 document.getElementById("Title").innerText = "Access Granted";
+                for (var i=0; i<size; i++) {
+                    document.getElementById("cell_"+i).style.color = "#000000";
+                }
             }
         }
         // Failure
@@ -67,6 +78,9 @@ function reset(doc = false) {
     inputLength = 0;
     if(doc) {
         updateCells();
+        for (var i=0; i<size; i++) {
+            document.getElementById("cell_"+i).style.color = "#000000";
+        }
     }
 }
 
